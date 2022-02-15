@@ -10,5 +10,5 @@ XlsxWriter == 3.0.2
 python-dateutil==2.8.2
 seaborn == 0.11.2
 scipy == 1.7.2
-fbprophet == 0.7.1
+
 
