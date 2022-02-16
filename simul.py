@@ -94,7 +94,7 @@ df = pd.read_excel('data_prep.xlsx')
 # st.table(df[df['group_price1'] == 0][make_choice_brand_sim])
 
 
-col1, col2 = st.beta_columns(2)
+col1, col2 = st.columns(2)
 with col1:
     # prices = ['Price1', 'Price2', 'Price3', 'Price4', 'Price5', 'Price6', 'Price7']
     brands = ['Brand1', 'Brand2', 'Brand3',
@@ -151,7 +151,7 @@ brands = ['Brand1', 'Brand2', 'Brand3', 'Brand4', 'Brand5', 'Brand6', 'Brand7',
 make_choice_brand = st.selectbox('brands', brands, 0)
 
 
-col3, col4, col5 = st.beta_columns(3)
+col3, col4, col5 = st.st.columns(3)
 with col3:
     plt.figure(figsize=(12, 8))
     sns.boxplot(x=df['DATE_month'], y=df[make_choice_brand])
