@@ -151,7 +151,7 @@ brands = ['Brand1', 'Brand2', 'Brand3', 'Brand4', 'Brand5', 'Brand6', 'Brand7',
 make_choice_brand = st.selectbox('brands', brands, 0)
 
 
-col3, col4, col5 = st.st.columns(3)
+col3, col4, col5 = st.columns(3)
 with col3:
     plt.figure(figsize=(12, 8))
     sns.boxplot(x=df['DATE_month'], y=df[make_choice_brand])
