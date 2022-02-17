@@ -108,8 +108,8 @@ with col1:
         df[make_choice_price_sim] < df[make_choice_price_sim].mean(), 0, 1)
     st.write('Gruppe A: <' + str(df[make_choice_price_sim].mean()))
     st.write('Gruppe B: >' + str(df[make_choice_price_sim].mean()))
-    st.write(
-        'Es wird die durchschnittliche Differenz zwischen der Gruppe A und Gruppe B untersucht')
+  #  st.write(
+    #    'Es wird die durchschnittliche Differenz zwischen der Gruppe A und Gruppe B untersucht')
     #st.write(np.percentile(df[make_choice_price_sim], 25))
     #st.write(np.percentile(df[make_choice_price_sim], 75))
     make_choice_group_a = st.selectbox(
@@ -150,7 +150,7 @@ brands = ['Brand1', 'Brand2', 'Brand3', 'Brand4', 'Brand5', 'Brand6', 'Brand7',
           ]
 make_choice_brand = st.selectbox('brands', brands, 0)
 
-
+st.title('Saisonalität und Trend')
 col3, col4, col5 = st.columns(3)
 with col3:
     plt.figure(figsize=(12, 8))
@@ -158,7 +158,7 @@ with col3:
     plt.xticks(rotation='vertical')
     st.pyplot(plt)
 
-st.title('Saisonalität und Trend')
+
 with col4:
     plt.figure(figsize=(12, 8))
     sns.boxplot(x=df[df['DATE_year'] == make_choice_year]['DATE_month_year'],
