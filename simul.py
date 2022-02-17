@@ -93,7 +93,7 @@ df = pd.read_excel('data_prep.xlsx')
 
 # st.table(df[df['group_price1'] == 0][make_choice_brand_sim])
 
-
+st.title('Simulationstool')
 col1, col2 = st.columns(2)
 with col1:
     # prices = ['Price1', 'Price2', 'Price3', 'Price4', 'Price5', 'Price6', 'Price7']
@@ -158,7 +158,7 @@ with col3:
     plt.xticks(rotation='vertical')
     st.pyplot(plt)
 
-
+st.title('Saisonalität und Trend')
 with col4:
     plt.figure(figsize=(12, 8))
     sns.boxplot(x=df[df['DATE_year'] == make_choice_year]['DATE_month_year'],
