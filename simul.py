@@ -138,7 +138,7 @@ with col2:
 #########################################################
 # st.table(df)
 
-
+st.title('Saisonalität und Trend')
 years = df['DATE_year'].unique()
 make_choice_year = st.selectbox('years', years, 0)
 
@@ -150,7 +150,7 @@ brands = ['Brand1', 'Brand2', 'Brand3', 'Brand4', 'Brand5', 'Brand6', 'Brand7',
           ]
 make_choice_brand = st.selectbox('brands', brands, 0)
 
-st.title('Saisonalität und Trend')
+
 col3, col4, col5 = st.columns(3)
 with col3:
     plt.figure(figsize=(12, 8))
